@@ -1,0 +1,175 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Plano de fundo */
+
+body{
+	height: 100%;
+	width: 100%;
+	background: rgb(31, 62, 64);
+}
+
+/**/
+
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+.clear{
+	clear: both;
+}
+
+header{
+	padding: 10px 0 10px 0;
+	background-color: rgb(1, 5, 5);
+}
+
+header h1{
+	color: white;
+	text-align: center;
+}
+
+section.ebook > .container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div.box{
+	width: 50%;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+div.image{
+	width: 380px;
+	height: 560px;
+	top: 38px;
+	float: left;
+	margin: auto;
+	position: relative;
+	background-size: 100% 100%;
+	background-image: url("../images/ebook_cover.jpg");
+}
+
+div.formulario{
+	float: right;
+	position: relative;
+	top: 40px;
+}
+
+div.formulario h2{
+	color: white;
+	padding: 90px 0 20px 0;
+}
+
+div.formulario h3{
+	color: white;
+}
+
+div.formulario p{
+	color: white;
+	font-size: 16px;
+	font-weight: lighter;
+	padding-bottom: 45px;
+}
+
+input[type=text]{
+	height: 45px;
+	width: 220px;
+	border: none;
+	font-size: 15px;
+	padding-left: 15px;
+	margin: 22px 10px 8px 0;
+	border-radius: 30px;
+}
+
+input[type=email]{
+	height: 45px;
+	width: calc(100% - 12px);
+	border: none;
+	font-size: 15px;
+	padding-left: 15px;
+	margin: 16px 8px 8px 0;
+	border-radius: 30px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus{
+	outline: 0;
+}
+
+button{
+	height: 45px;
+	width: 200px;
+	border: none;
+	background: rgb(1, 5, 5);
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 16px;
+	border-radius: 30px;
+}
+
+button:hover{
+	color: rgb(1, 5, 5);
+	background: white;
+}
+
+@media screen and (max-width: 968px){
+	input[type=text],input[type=email]{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 830px){
+	div.box{
+		width: 100%;
+		margin: auto;
+		/*margin-bottom: 50px;*/
+		text-align: center;
+	}
+
+	div.image{float: none;}
+	div.formulario{
+		float: none;
+		padding: 0 5% 50px 5%;
+	}
+
+	input[type=text],
+	input[type=email]{
+		width: 60%;
+	}
+
+	button{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 430px){
+	header h1{
+		font-size: 22px;
+	}
+	div.box{
+		margin: 0;
+	}
+	div.image{
+		width: 280px;
+		height: 460px;
+	}
+
+	input[type=text],
+	input[type=email]{
+		width: 80%;
+		border: 1px solid rgb(1, 5, 5);
+	}
+
+	button{
+		width: 60%;
+	}
+}
